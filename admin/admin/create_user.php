@@ -1,3 +1,5 @@
+<?php
+
 if (isset($_POST['login_btn'])) {
 	login();
 }
@@ -44,3 +46,5 @@ function login(){
 		}
 	}
 }
+
+?>
