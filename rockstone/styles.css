@@ -1,0 +1,211 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.h-font{
+    font-family: 'Merienda', cursive;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+.availability-form{
+    margin-top: -50px;
+    z-index: 2;
+    position: relative;
+}
+
+.custome-bg{
+    background-color: darkslategray;
+    border: 1px solid rgb(77, 130, 130);
+}
+
+.custome-bg:hover{
+    background-color: rgb(77, 130, 130);
+    border-color: rgb(77, 130, 130);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media */
+
+@media screen and (max-width: 550px){
+    .availability-form{
+        margin-top: 0;
+        padding: 0 35px;
+    }
+}
+
+/* footer */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,700;1,400&display=swap');
+
+*
+{
+    font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    box-shadow: var(--box-shadow);
+    align-items: center;
+    justify-content: space-between;
+}
+
+html{
+    --main-color: rgb(77, 130, 130);
+    --light-bg: rgb(77, 130, 130);
+    --dark-bg: #000000;
+    --light-white: #d1d1d1;
+    --white: #fff;
+}
+
+html::-webkit-scrollbar
+{
+    width: 1rem,
+}
+html::-webkit-scrollbar-track
+{
+    background-color: var(--white);
+}
+html::-webkit-scrollbar-thumb
+{
+    background-color: var(--main-color);
+}
+
+
+
+
+body {
+margin: 0;
+padding: 0;
+}
+
+.footer
+{
+    background-color: var(--dark-bg);
+}
+
+.footer .box-container
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+    padding-left: 25px;
+}
+
+.footer .headbox h3
+{
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: .5px solid var(--light-black);
+    font-size: 25px;
+    color: var(--light-bg);
+}
+
+.footer .box-container .box h4
+{
+    color: var(--white);
+    font-size: 25px;
+    padding-bottom: 20px;
+    padding-top: 15px;
+}
+
+.footer .box-container .box a
+{
+    color: var(--light-white);
+    font-size: 15px;
+    padding-bottom: 20px;
+    display: block;
+}
+
+.footer .box-container .box a i
+{
+    color: var(--main-color);
+    padding-right: 5px;
+    transition: .2s linear;
+}
+
+.footer .box-container .box a:hover i
+{   
+    padding-right: 20px;
+}
+
+.footer .box-container .box a:hover
+{
+    color: var(--main-color);
+}
+
+.footer .author
+{
+    text-align: center;
+    padding-top: 20px;
+    border-top: 3px solid var(--white);
+    font-size: 25px;
+    color: var(--light-bg);
+}
+
+.footer .author span
+{
+    color: var(--white);
+}
+
+
+
+/* room css */
+
+.mySlides1, .mySlides2, .mySlide3, .mySlide {display: none}
+img {vertical-align: middle;}
+
+
+/* Next & previous buttons */
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+padding: 16px;
+margin-top: -22px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+background-color: #f1f1f1;
+color: black;
+}
