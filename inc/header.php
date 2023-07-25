@@ -23,8 +23,7 @@
             </ul>
 
             <div class="d-flex" role="search">
-            <button type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2"><a href="admin/login.php">Login</a></button>
-            <button type="button" class="btn btn-outline-dark shadow-none"><a href="admin/login.php">Register</a></button>
+                  <button type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2"><a href="index.php" style="color: rgb(77, 130, 130)">Logout</a></button>
             </div>
         </div>
         </div>
