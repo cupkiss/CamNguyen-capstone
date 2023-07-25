@@ -2,7 +2,12 @@
 session_start();
 
 // connect to database
-$db = mysqli_connect('localhost', 'root', '', 'multi_login');
+$db = mysqli_connect('localhost', 'capstones', 'Qwertyuiop!123', 'multi_login');
+
+// check connection
+if(mysqli_connect_errno()) {  
+	die("Failed to connect with MySQL: ". mysqli_connect_error());  
+}  
 
 // variable declaration
 $username = "";
@@ -16,15 +21,14 @@ if (isset($_POST['register_btn'])) {
 
 // REGISTER USER
 function register(){
-	// call these variables with the global keyword to make them available in function
+
 	global $db, $errors, $username, $email;
 
-	// receive all input values from the form. Call the e() function
     // defined below to escape form values
-	$username    =  e($_POST['username']);
-	$email       =  e($_POST['email']);
-	$password_1  =  e($_POST['password_1']);
-	$password_2  =  e($_POST['password_2']);
+	$username    =  $_POST['username'];
+	$email       =  $_POST['email'];
+	$password_1  =  $_POST['password_1'];
+	$password_2  =  $_POST['password_2'];
 
 	// form validation: ensure that the form is correctly filled
 	if (empty($username)) { 
@@ -40,6 +44,17 @@ function register(){
 		array_push($errors, "The two passwords do not match");
 	}
 
+   //to prevent from mysqli injection  
+	$username = stripcslashes($username);  
+	$password_1 = stripcslashes($password_1);  
+	$username = mysqli_real_escape_string($db, $username);  
+	$password_1 = mysqli_real_escape_string($db, $password_1);  
+
+	$sql = "select * from users where username = '$username' and password = '$password_1'";  
+	$result = mysqli_query($db, $sql);  
+	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
+	$count = mysqli_num_rows($result);  
+	
 	// register user if there are no errors in the form
 	if (count($errors) == 0) {
 		$password = md5($password_1);//encrypt the password before saving in the database

@@ -33,10 +33,10 @@
 		<input type="password" name="password_2">
 	</div>
 	<div class="input-group">
-		<button type="submit" class="btn" name="register_btn"><a href="../home.php">REGISTER</a></button>
+		<button type="submit" class="btn" name="register_btn"><a style="color: white;" href="../home.php">REGISTER</a></button>
 	</div>
 	<p>
-		Already a member? <a href="login.php">Sign in</a>
+		Already a member? <a href="login.php" style="color: rgb(77, 130, 130);">Sign in</a>
 	</p>
 </form>
 </body>
